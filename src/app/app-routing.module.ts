@@ -5,9 +5,11 @@ import { LoginPageComponent} from './components/login-page/login-page.component'
 import { RegisterPageComponent} from './components/register-page/register-page.component';
 import { PrivatePageComponent} from './components/private-page/private-page.component';
 import { NotFoundPageComponent} from './components/not-found-page/not-found-page.component';
+import { HistoryPageComponent} from './components/history-page/history-page.component';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
+  {path: 'history', component: HistoryPageComponent},
   {path: 'login', component: LoginPageComponent},
   {path: 'register', component: RegisterPageComponent},
   {path: 'private', component: PrivatePageComponent},
