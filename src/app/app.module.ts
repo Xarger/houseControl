@@ -11,6 +11,10 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 import { PrivatePageComponent } from './components/private-page/private-page.component';
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 import { HistoryPageComponent } from './components/history-page/history-page.component';
+import { TechnologyPageComponent } from './components/technology-page/technology-page.component';
+import { TrainingPageComponent } from './components/training-page/training-page.component';
+import { BibliographyPageComponent } from './components/bibliography-page/bibliography-page.component';
+import { ElectronicPartsPageComponent } from './components/electronic-parts-page/electronic-parts-page.component';
 
 
 @NgModule({
@@ -22,7 +26,11 @@ import { HistoryPageComponent } from './components/history-page/history-page.com
     LoginPageComponent,
     PrivatePageComponent,
     NotFoundPageComponent,
-    HistoryPageComponent
+    HistoryPageComponent,
+    TechnologyPageComponent,
+    TrainingPageComponent,
+    BibliographyPageComponent,
+    ElectronicPartsPageComponent
   ],
   imports: [
     BrowserModule,
