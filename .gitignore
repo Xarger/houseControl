@@ -5,10 +5,6 @@
 /dist-server
 /tmp
 /out-tsc
-/src/environments
-/environments
-.environment.prod.ts
-.environment.ts
 
 # dependencies
 /node_modules
@@ -45,3 +41,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# environments
+/src/environments/*.ts
+
