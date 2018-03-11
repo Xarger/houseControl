@@ -10,11 +10,19 @@
       <li class="nav-item active">
         <a class="nav-link" href="#" routerLink="/">  Home <span class="sr-only">(current)</span></a>
       </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">  Command Center</a>
+        <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 47px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <a class="dropdown-item" href="#" >Total system</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#" routerLink="/bibliography">System Info</a>
+        </div>
+      </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" routerLink="/history">  History </a>
+        <a class="nav-link" href="#" routerLink="/history">    History </a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Technicalities</a>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">  Technicalities</a>
         <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 47px, 0px); top: 0px; left: 0px; will-change: transform;">
           <a class="dropdown-item" href="#" routerLink="/technology">Technology</a>
           <a class="dropdown-item" href="#" routerLink="/electronic-parts">Electronic parts</a>
