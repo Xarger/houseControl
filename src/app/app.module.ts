@@ -15,6 +15,7 @@ import { TechnologyPageComponent } from './components/technology-page/technology
 import { TrainingPageComponent } from './components/training-page/training-page.component';
 import { BibliographyPageComponent } from './components/bibliography-page/bibliography-page.component';
 import { ElectronicPartsPageComponent } from './components/electronic-parts-page/electronic-parts-page.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { ElectronicPartsPageComponent } from './components/electronic-parts-page
     TechnologyPageComponent,
     TrainingPageComponent,
     BibliographyPageComponent,
-    ElectronicPartsPageComponent
+    ElectronicPartsPageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
