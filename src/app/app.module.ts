@@ -16,6 +16,7 @@ import { TrainingPageComponent } from './components/training-page/training-page.
 import { BibliographyPageComponent } from './components/bibliography-page/bibliography-page.component';
 import { ElectronicPartsPageComponent } from './components/electronic-parts-page/electronic-parts-page.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ChartComponent } from './components/chart/chart.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { FooterComponent } from './components/footer/footer.component';
     TrainingPageComponent,
     BibliographyPageComponent,
     ElectronicPartsPageComponent,
-    FooterComponent
+    FooterComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,

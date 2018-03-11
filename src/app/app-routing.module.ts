@@ -10,6 +10,8 @@ import { TechnologyPageComponent} from './components/technology-page/technology-
 import { TrainingPageComponent} from './components/training-page/training-page.component';
 import { BibliographyPageComponent} from './components/bibliography-page/bibliography-page.component';
 import { ElectronicPartsPageComponent} from './components/electronic-parts-page/electronic-parts-page.component';
+import { ChartComponent} from './components/chart/chart.component';
+
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
@@ -20,6 +22,7 @@ const routes: Routes = [
   {path: 'training', component: TrainingPageComponent},
   {path: 'login', component: LoginPageComponent},
   {path: 'register', component: RegisterPageComponent},
+  {path: 'chart', component: ChartComponent},
   {path: 'private', component: PrivatePageComponent},
   {path: '**', component: NotFoundPageComponent}
 ];
