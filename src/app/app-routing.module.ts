@@ -12,6 +12,7 @@ import { BibliographyPageComponent} from './components/bibliography-page/bibliog
 import { ElectronicPartsPageComponent} from './components/electronic-parts-page/electronic-parts-page.component';
 import { ChartComponent} from './components/chart/chart.component';
 
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
@@ -23,7 +24,7 @@ const routes: Routes = [
   {path: 'login', component: LoginPageComponent},
   {path: 'register', component: RegisterPageComponent},
   {path: 'chart', component: ChartComponent},
-  {path: 'private', component: PrivatePageComponent},
+  {path: 'private', component: PrivatePageComponent, canActivate: [AuthGuard]},
   {path: '**', component: NotFoundPageComponent}
 ];
 
