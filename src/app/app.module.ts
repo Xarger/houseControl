@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -18,6 +18,12 @@ import { ElectronicPartsPageComponent } from './components/electronic-parts-page
 import { FooterComponent } from './components/footer/footer.component';
 import { ChartComponent } from './components/chart/chart.component';
 
+import { AngularFireModule} from 'angularfire2';
+import { AngularFireAuthModule} from 'angularfire2/auth';
+
+import { environment } from '../environments/environment';
+
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -38,9 +44,12 @@ import { ChartComponent } from './components/chart/chart.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
