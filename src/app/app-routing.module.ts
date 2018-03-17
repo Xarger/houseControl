@@ -16,14 +16,14 @@ import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
-  {path: 'history', component: HistoryPageComponent},
-  {path: 'technology', component: TechnologyPageComponent},
-  {path: 'bibliography', component: BibliographyPageComponent},
-  {path: 'electronic-parts', component: ElectronicPartsPageComponent},
-  {path: 'training', component: TrainingPageComponent},
+  {path: 'history', component: HistoryPageComponent, canActivate: [AuthGuard]},
+  {path: 'technology', component: TechnologyPageComponent, canActivate: [AuthGuard]},
+  {path: 'bibliography', component: BibliographyPageComponent, canActivate: [AuthGuard]},
+  {path: 'electronic-parts', component: ElectronicPartsPageComponent, canActivate: [AuthGuard]},
+  {path: 'training', component: TrainingPageComponent, canActivate: [AuthGuard]},
   {path: 'login', component: LoginPageComponent},
   {path: 'register', component: RegisterPageComponent},
-  {path: 'chart', component: ChartComponent},
+  {path: 'chart', component: ChartComponent , canActivate: [AuthGuard]},
   {path: 'private', component: PrivatePageComponent, canActivate: [AuthGuard]},
   {path: '**', component: NotFoundPageComponent}
 ];
