@@ -11,6 +11,7 @@ import { TrainingPageComponent} from './components/training-page/training-page.c
 import { BibliographyPageComponent} from './components/bibliography-page/bibliography-page.component';
 import { ElectronicPartsPageComponent} from './components/electronic-parts-page/electronic-parts-page.component';
 import { ChartComponent} from './components/chart/chart.component';
+import { CommandsUsedComponent} from './commands-used/commands-used.component';
 
 import { AuthGuard } from './guards/auth.guard';
 
@@ -23,8 +24,9 @@ const routes: Routes = [
   {path: 'training', component: TrainingPageComponent, canActivate: [AuthGuard]},
   {path: 'login', component: LoginPageComponent},
   {path: 'register', component: RegisterPageComponent},
-  {path: 'chart', component: ChartComponent , canActivate: [AuthGuard]},
+  {path: 'chart', component: ChartComponent, canActivate: [AuthGuard]},
   {path: 'private', component: PrivatePageComponent, canActivate: [AuthGuard]},
+  {path: 'commands-used', component: CommandsUsedComponent, canActivate: [AuthGuard]},
   {path: '**', component: NotFoundPageComponent}
 ];
 

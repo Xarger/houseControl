@@ -17,6 +17,7 @@ import { BibliographyPageComponent } from './components/bibliography-page/biblio
 import { ElectronicPartsPageComponent } from './components/electronic-parts-page/electronic-parts-page.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ChartComponent } from './components/chart/chart.component';
+import { CommandsUsedComponent } from './commands-used/commands-used.component';
 
 import { AngularFireModule} from 'angularfire2';
 import { AngularFireAuthModule} from 'angularfire2/auth';
@@ -25,6 +26,7 @@ import { environment } from '../environments/environment';
 
 import { AuthService } from './services/auth.service';
 import { AuthGuard } from './guards/auth.guard';
+
 
 @NgModule({
   declarations: [
@@ -41,7 +43,8 @@ import { AuthGuard } from './guards/auth.guard';
     BibliographyPageComponent,
     ElectronicPartsPageComponent,
     FooterComponent,
-    ChartComponent
+    ChartComponent,
+    CommandsUsedComponent
   ],
   imports: [
     BrowserModule,
