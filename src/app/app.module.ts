@@ -26,6 +26,7 @@ import { environment } from '../environments/environment';
 
 import { AuthService } from './services/auth.service';
 import { AuthGuard } from './guards/auth.guard';
+import { RaspberryFirstComponent } from './raspberry-first/raspberry-first.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { AuthGuard } from './guards/auth.guard';
     ElectronicPartsPageComponent,
     FooterComponent,
     ChartComponent,
-    CommandsUsedComponent
+    CommandsUsedComponent,
+    RaspberryFirstComponent
   ],
   imports: [
     BrowserModule,
