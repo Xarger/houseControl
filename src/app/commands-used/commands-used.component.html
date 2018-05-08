@@ -12,6 +12,9 @@
   <li class="nav-item">
     <a class="nav-link" data-toggle="tab" href="#mysql">mysql</a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#micropython">micropython</a>
+  </li>
 </ul>
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade active show" id="angular">
@@ -26,7 +29,11 @@
     <br><h3>
       &nbsp; &nbsp; lsb_release -a
       <small class="text-muted"> &nbsp;&nbsp; the command that calls the version of the distribution used</small><br>
-       </h3>
+      &nbsp; &nbsp; pip install esptool
+      <small class="text-muted"> &nbsp;&nbsp; instalation pip</small><br>
+      &nbsp; &nbsp; esptool.py --port /dev/ttyUSB0 erase_flash
+      <small class="text-muted"> &nbsp;&nbsp; delete memory flash on ESP modul </small><br>          
+    </h3>
   </div>
   <div class="tab-pane fade" id="github">
     <br><h3>
@@ -45,5 +52,13 @@
         &nbsp; &nbsp; sudo /opt/lampp/lampp stop
         <small class="text-muted"> &nbsp;&nbsp; stop mysql data base </small><br>
          </h3>
+    </div>
+    <div class="tab-pane fade" id="micropython">
+      <br><h3>
+        &nbsp; &nbsp; picocom /dev/ttyUSB0 -b115200 
+        <small class="text-muted"> &nbsp;&nbsp; open terminal on the ESP</small><br>
+        &nbsp; &nbsp; import webrepl_setup
+        <small class="text-muted"> &nbsp;&nbsp; run webrepl setup </small><br>
+      </h3>
       </div>
 </div>

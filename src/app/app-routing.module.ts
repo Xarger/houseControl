@@ -13,6 +13,7 @@ import { ElectronicPartsPageComponent } from './components/electronic-parts-page
 import { ChartComponent } from './components/chart/chart.component';
 import { CommandsUsedComponent } from './commands-used/commands-used.component';
 import { RaspberryFirstComponent } from './raspberry-first/raspberry-first.component';
+import { ChartsPageComponent } from './components/charts-page/charts-page.component';
 
 import { AuthGuard } from './guards/auth.guard';
 
@@ -29,6 +30,7 @@ const routes: Routes = [
   {path: 'private', component: PrivatePageComponent, canActivate: [AuthGuard]},
   {path: 'commands-used', component: CommandsUsedComponent, canActivate: [AuthGuard]},
   {path: 'raspberryfirst', component: RaspberryFirstComponent, canActivate: [AuthGuard]},
+  {path: 'charts', component: ChartsPageComponent, canActivate: [AuthGuard]},
   {path: '**', component: NotFoundPageComponent}
 ];
 

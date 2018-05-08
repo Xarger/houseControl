@@ -1,0 +1,36 @@
+<div>
+
+  <div id="bel">
+    <br>
+    <div style="float: left">
+        <br>
+      <div class="form-group">
+        <select class="custom-select" #select [(ngModel)]="choice">
+          <option selected="">Open this select menu</option>
+          <option value="DTH11_ESP8266_1">DTH11 - ESP8266_1</option>
+          <option value="Soil Moisture ESP8266_1">Soil Moisture ESP8266_1</option>
+          <option value="CCCCCC">Three</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="bel_2"  [ngSwitch]="choice">
+      <br>
+      <h2 *ngSwitchCase="'DTH11_ESP8266_1'" align="center">Greenhouse temp chart DTH11 - ESP8266_1 </h2>
+      <h2 *ngSwitchCase="'Soil Moisture ESP8266_1'" align="center">Soil Moisture - ESP8266_1 </h2>
+    </div>
+
+  </div>
+
+  <div>
+    <div [ngSwitch]="choice">
+      <h3 align="center" *ngSwitchCase="'DTH11_ESP8266_1'" >
+          <iframe height="565px" width="950px" src="http://192.168.1.33/ESP/test.php" style="border:0px solid #D9831F;"></iframe>   
+      </h3>
+      <h3 align="center" *ngSwitchCase="'Soil Moisture ESP8266_1'" >
+        <iframe height="565px" width="950px" src="http://192.168.1.33/ESP/soilMoisture.php" style="border:0px solid #D9831F;"></iframe>   
+    </h3>
+    </div>
+
+  </div>
+</div>
