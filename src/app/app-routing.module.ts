@@ -14,8 +14,11 @@ import { ChartComponent } from './components/chart/chart.component';
 import { CommandsUsedComponent } from './commands-used/commands-used.component';
 import { RaspberryFirstComponent } from './raspberry-first/raspberry-first.component';
 import { ChartsPageComponent } from './components/charts-page/charts-page.component';
-
+import { AddComponent } from './ems/add/add.component';
+import { ShowComponent } from './ems/show/show.component';
+import { EditComponent } from './ems/edit/edit.component';
 import { AuthGuard } from './guards/auth.guard';
+import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
@@ -31,11 +34,18 @@ const routes: Routes = [
   {path: 'commands-used', component: CommandsUsedComponent, canActivate: [AuthGuard]},
   {path: 'raspberryfirst', component: RaspberryFirstComponent, canActivate: [AuthGuard]},
   {path: 'charts', component: ChartsPageComponent, canActivate: [AuthGuard]},
+  {path: 'add', component: AddComponent},
+  {path:"show/:id", component:ShowComponent},
+  {path:"edit/:id", component:EditComponent},
   {path: '**', component: NotFoundPageComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+    CommonModule,
+    RouterModule.forRoot(routes)
+  ],
+  exports: [RouterModule],
+  declarations: []
 })
 export class AppRoutingModule { }

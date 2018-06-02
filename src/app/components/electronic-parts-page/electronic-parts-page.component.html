@@ -1,3 +1,65 @@
-<p>
-  electronic-parts-page works!
-</p>
+<br><br>
+<div id="topic">
+  <div style="float: left">
+    <h2>Data base electronic parts</h2>
+  </div>
+  <div id="addbutton" >
+    <button type="button" class="btn btn-danger btn-lg" href="#" routerLink="../add">Add electronic part</button>
+  </div>
+</div>
+
+<br><br>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Position</th>
+      <th scope="col">Department</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <br>
+
+  <tbody>
+    <tr class="table-light" *ngFor="let employee of employees">
+      <th scope="row">{{employee.name}}</th>
+      <td>{{employee.position}}</td>
+      <td>{{employee.department}}</td>
+      <td width=275>
+        <button type="button" class="btn btn-outline-info btn-sm" routerLink="/show/{{employee._id}}">Detail</button>
+        <button type="button" class="btn btn-outline-success btn-sm" routerLink="/edit/{{employee._id}}">Edit</button>
+        <button type="button" class="btn btn-outline-primary btn-sm"  (click)="deleteEmployee(employee._id)">Delete</button>      
+      </td>
+    </tr>
+  </tbody>
+</table> 
+
+<!--
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Position</td>
+      <td>Department</td>
+      <td width=275 align="center">Action</td>
+    </tr>
+  </thead>
+  <tbody>
+     <tr *ngFor="let employee of employees">
+        <td>{{employee.name}}</td>
+        <td>{{employee.position}}</td>
+        <td>{{employee.department}}</td>
+        <td width=275> 
+            <button type="button" class="btn btn-outline-info" routerLink="/show/{{employee._id}}">Detail</button>
+            <button type="button" class="btn btn-outline-success" routerLink="/edit/{{employee._id}}">Edit</button>
+            <button type="button" class="btn btn-outline-primary"  (click)="deleteEmployee(employee._id)">Delete</button>
+        </td>
+     </tr>
+    
+  </tbody>
+ 
+</table>
+-->
+
+<br><br><br><br>

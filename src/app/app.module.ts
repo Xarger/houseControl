@@ -28,7 +28,11 @@ import { AuthService } from './services/auth.service';
 import { AuthGuard } from './guards/auth.guard';
 import { RaspberryFirstComponent } from './raspberry-first/raspberry-first.component';
 import { ChartsPageComponent } from './components/charts-page/charts-page.component';
-
+import { AddComponent } from './ems/add/add.component';
+import { EditComponent } from './ems/edit/edit.component';
+import { ShowComponent } from './ems/show/show.component';
+import { EmpService } from './emp.service';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -48,16 +52,20 @@ import { ChartsPageComponent } from './components/charts-page/charts-page.compon
     ChartComponent,
     CommandsUsedComponent,
     RaspberryFirstComponent,
-    ChartsPageComponent
+    ChartsPageComponent,
+    AddComponent,
+    EditComponent,
+    ShowComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService, AuthGuard, EmpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
