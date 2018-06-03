@@ -1,12 +1,8 @@
 export class Employee {
-    // constructor(
-    //     public name: string,
-    //     public position: string,
-    //     public department: string,
-    //     public salary: string
-    // ){}
     name: string;
-    position: string;
-    department: string;
-    salary: string;
+    website: string;
+    price: string;
+    project: string;
+    quantity: string;
+    availability: string;
 }
