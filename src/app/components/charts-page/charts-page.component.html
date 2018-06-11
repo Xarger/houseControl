@@ -25,10 +25,14 @@
   <div>
     <div [ngSwitch]="choice">
       <h3 align="center" *ngSwitchCase="'DTH11_ESP8266_1'" >
-          <iframe height="565px" width="950px" src="http://192.168.1.11/ESP/test.php" style="border:0px solid #D9831F;"></iframe>   
+          <iframe height="565px" width="950px" src="http://192.168.1.11/charts/dth11TempHum.php" style="border:0px solid #D9831F;"></iframe>
+          <br>
+          <iframe height="140px" width="900px" src="http://192.168.1.11/moduleTest/temp_hum.php" style="border:0px solid #D9831F;"></iframe>   
       </h3>
       <h3 align="center" *ngSwitchCase="'Soil Moisture ESP8266_1'" >
-        <iframe height="565px" width="950px" src="http://192.168.1.11/ESP/soilMoisture.php" style="border:0px solid #D9831F;"></iframe>   
+        <iframe height="565px" width="950px" src="http://192.168.1.11/charts/soilMoisture.php" style="border:0px solid #D9831F;"></iframe>
+        <br>
+          <iframe height="140px" width="900px" src="http://192.168.1.11/moduleTest/hum_soil.php" style="border:0px solid #D9831F;"></iframe>      
     </h3>
     </div>
 

@@ -4,15 +4,15 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class EmpService {
-  employees=[];
-  constructor(private _http:Http) { }
-  checkMe:any;
-  getEmployees(){
+  employees = [];
+  constructor(private _http: Http) { }
+  checkMe: any;
+  getEmployees() {
     return this._http.get("http://localhost/api/select.php/")
-      .map(res=>{
+      .map(res=> {
         this.checkMe = res;
        
-        if(this.checkMe._body !== "0"){
+        if (this.checkMe._body !== "0") {
            return res.json()
         }
        
