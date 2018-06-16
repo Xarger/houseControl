@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute, Params, Router} from '@angular/router';
+import { PartsService } from '../../parts.service';
+import { PartsElectronic } from '../../partselectronic';
 
 @Component({
   selector: 'app-chart',
@@ -8,8 +11,8 @@ import { Component, OnInit } from '@angular/core';
 export class ChartComponent implements OnInit {
 
   constructor() { }
-
+  
   ngOnInit() {
-  }
-
+    }
+  
 }

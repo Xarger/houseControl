@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { EmpService } from '../../emp.service';
-import { Employee } from '../../employee';
+import { PartsService } from '../../parts.service';
+import { PartsElectronic } from '../../partselectronic';
 import {ActivatedRoute, Params, Router} from '@angular/router';
 
 @Component({
@@ -11,25 +11,25 @@ import {ActivatedRoute, Params, Router} from '@angular/router';
 export class ElectronicPartsPageComponent implements OnInit {
 
   constructor(
-    private _empService:EmpService,
+    private _partsService:PartsService,
     private router: Router
   ) { }
-  employees:any;
+  partselectronics:any;
   ngOnInit() {
-    this.getEmployees();
+    this.getParts();
   }
-  getEmployees(){
-    this._empService
-       .getEmployees()
-       .subscribe(employees => {
-         this.employees = employees;
+  getParts(){
+    this._partsService
+       .getParts()
+       .subscribe(partselectronics => {
+         this.partselectronics = partselectronics;
      } )
  }
- deleteEmployee(id){
-     this._empService
-       .deleteEmployee(id)
+ deletePart(id){
+     this._partsService
+       .deletePart(id)
        .subscribe(() => {
-       this.getEmployees();
+       this.getParts();
      } )
  }
 }

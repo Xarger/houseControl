@@ -4,7 +4,7 @@
     <h2>Data base electronic parts</h2>
   </div>
   <div id="addbutton" >
-    <button type="button" class="btn btn-danger btn-lg" href="#" routerLink="../add">Add electronic part</button>
+    <button type="button" class="btn btn-danger btn-lg" href="#" routerLink="../addpart">Add electronic part</button>
   </div>
 </div>
 
@@ -25,17 +25,17 @@
   <br>
 
   <tbody>
-    <tr class="table-light" *ngFor="let employee of employees">
-      <th scope="row">{{employee.name}}</th>
-      <td>{{employee.website}}</td>
-      <td>{{employee.price}}</td>
-      <td>{{employee.project}}</td>
-      <td>{{employee.quantity}}</td>
-      <td>{{employee.availability}}</td>
+    <tr class="table-light" *ngFor="let partselectronic of partselectronics">
+      <th scope="row">{{partselectronic.name}}</th>
+      <td>{{partselectronic.website}}</td>
+      <td>{{partselectronic.price}}</td>
+      <td>{{partselectronic.project}}</td>
+      <td>{{partselectronic.quantity}}</td>
+      <td>{{partselectronic.availability}}</td>
       <td width=175>
-        <button type="button" class="btn btn-outline-info btn-sm" routerLink="/show/{{employee._id}}">Detail</button>
-        <button type="button" class="btn btn-outline-success btn-sm" routerLink="/edit/{{employee._id}}">Edit</button>
-        <button type="button" class="btn btn-outline-primary btn-sm"  (click)="deleteEmployee(employee._id)">Delete</button>      
+        <button type="button" class="btn btn-outline-info btn-sm" routerLink="/showpart/{{partselectronic._id}}">Detail</button>
+        <button type="button" class="btn btn-outline-success btn-sm" routerLink="/editpart/{{partselectronic._id}}">Edit</button>
+        <button type="button" class="btn btn-outline-primary btn-sm"  (click)="deletePart(partselectronic._id)">Delete</button>      
       </td>
     </tr>
   </tbody>

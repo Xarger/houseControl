@@ -1,4 +1,4 @@
-export class Employee {
+export class PartsElectronic {
     name: string;
     website: string;
     price: string;
