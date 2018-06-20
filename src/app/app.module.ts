@@ -33,6 +33,11 @@ import { HttpModule } from '@angular/http';
 import { AddpartComponent } from './functionDbParts/addpart/addpart.component';
 import { EditpartComponent } from './functionDbParts/editpart/editpart.component';
 import { ShowpartComponent } from './functionDbParts/showpart/showpart.component';
+import { TotalSystemPageComponent } from './components/total-system-page/total-system-page.component';
+import { SystemInfoPageComponent } from './components/system-info-page/system-info-page.component';
+import { TemperatureComponent } from './components/temperature/temperature.component';
+import { Esp8266OneComponent } from './esp8266-one/esp8266-one.component';
+import { Esp8266TwoComponent } from './esp8266-two/esp8266-two.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +60,12 @@ import { ShowpartComponent } from './functionDbParts/showpart/showpart.component
     ChartsPageComponent,
     AddpartComponent,
     EditpartComponent,
-    ShowpartComponent
+    ShowpartComponent,
+    TotalSystemPageComponent,
+    SystemInfoPageComponent,
+    TemperatureComponent,
+    Esp8266OneComponent,
+    Esp8266TwoComponent
   ],
   imports: [
     BrowserModule,

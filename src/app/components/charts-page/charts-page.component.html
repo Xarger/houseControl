@@ -9,7 +9,7 @@
           <option selected="">Open this select menu</option>
           <option value="DTH11_ESP8266_1">DTH11 - ESP8266_1</option>
           <option value="Soil Moisture ESP8266_1">Soil Moisture ESP8266_1</option>
-          <option value="CCCCCC">Three</option>
+          <option value="ALL">All charts</option>
         </select>
       </div>
     </div>
@@ -18,6 +18,7 @@
       <br>
       <h2 *ngSwitchCase="'DTH11_ESP8266_1'" align="center">Greenhouse temp chart DTH11 - ESP8266_1 </h2>
       <h2 *ngSwitchCase="'Soil Moisture ESP8266_1'" align="center">Soil Moisture - ESP8266_1 </h2>
+      <h2 *ngSwitchCase="'ALL'" align="center">All charts </h2>
     </div>
 
   </div>
@@ -25,15 +26,21 @@
   <div>
     <div [ngSwitch]="choice">
       <h3 align="center" *ngSwitchCase="'DTH11_ESP8266_1'" >
-          <iframe height="565px" width="950px" src="http://192.168.1.11/charts/dth11TempHum.php" style="border:0px solid #D9831F;"></iframe>
+          <iframe height="565px" width="950px" src="http://192.168.1.39/charts/dth11TempHum.php" style="border:0px solid #D9831F;"></iframe>
           <br>
-          <iframe height="140px" width="900px" src="http://192.168.1.11/moduleTest/temp_hum.php" style="border:0px solid #D9831F;"></iframe>   
+          <iframe height="140px" width="900px" src="http://192.168.1.39/moduleTest/temp_hum.php" style="border:0px solid #D9831F;"></iframe>   
       </h3>
       <h3 align="center" *ngSwitchCase="'Soil Moisture ESP8266_1'" >
-        <iframe height="565px" width="950px" src="http://192.168.1.11/charts/soilMoisture.php" style="border:0px solid #D9831F;"></iframe>
+        <iframe height="565px" width="950px" src="http://192.168.1.39/charts/soilMoisture.php" style="border:0px solid #D9831F;"></iframe>
         <br>
-          <iframe height="140px" width="900px" src="http://192.168.1.11/moduleTest/hum_soil.php" style="border:0px solid #D9831F;"></iframe>      
-    </h3>
+        <iframe height="140px" width="900px" src="http://192.168.1.39/moduleTest/hum_soil.php" style="border:0px solid #D9831F;"></iframe>      
+      </h3>
+      <h3 align="center" *ngSwitchCase="'ALL'" >
+        <iframe height="565px" width="950px" src="http://192.168.1.39/charts/dth11TempHum.php" style="border:0px solid #D9831F;"></iframe>
+        <br>
+        <iframe height="565px" width="950px" src="http://192.168.1.39/charts/soilMoisture.php" style="border:0px solid #D9831F;"></iframe>
+        <br><br><br>
+      </h3>
     </div>
 
   </div>

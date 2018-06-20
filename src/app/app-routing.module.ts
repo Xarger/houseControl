@@ -19,7 +19,11 @@ import { CommonModule } from '@angular/common';
 import { AddpartComponent } from './functionDbParts/addpart/addpart.component';
 import { ShowpartComponent } from './functionDbParts/showpart/showpart.component';
 import { EditpartComponent } from './functionDbParts/editpart/editpart.component';
-
+import { SystemInfoPageComponent } from './components/system-info-page/system-info-page.component';
+import { TemperatureComponent } from './components/temperature/temperature.component';
+import { TotalSystemPageComponent } from './components/total-system-page/total-system-page.component';
+import { Esp8266OneComponent } from './esp8266-one/esp8266-one.component';
+import { Esp8266TwoComponent } from './esp8266-two/esp8266-two.component';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
@@ -35,9 +39,14 @@ const routes: Routes = [
   {path: 'commands-used', component: CommandsUsedComponent, canActivate: [AuthGuard]},
   {path: 'raspberryfirst', component: RaspberryFirstComponent, canActivate: [AuthGuard]},
   {path: 'charts', component: ChartsPageComponent, canActivate: [AuthGuard]},
-  {path: 'addpart', component: AddpartComponent},
-  {path:"showpart/:id", component:ShowpartComponent},
-  {path:"editpart/:id", component:EditpartComponent},
+  {path: 'addpart', component: AddpartComponent, canActivate: [AuthGuard]},
+  {path: 'showpart/:id', component: ShowpartComponent, canActivate: [AuthGuard]},
+  {path: 'editpart/:id', component: EditpartComponent, canActivate: [AuthGuard]},
+  {path: 'system-info', component: SystemInfoPageComponent, canActivate: [AuthGuard]},
+  {path: 'temperature', component: TemperatureComponent, canActivate: [AuthGuard]},
+  {path: 'total-system', component: TotalSystemPageComponent, canActivate: [AuthGuard]},
+  {path: 'esp8266-one', component: Esp8266OneComponent, canActivate: [AuthGuard]},
+  {path: 'esp8266-two', component: Esp8266TwoComponent, canActivate: [AuthGuard]},
   {path: '**', component: NotFoundPageComponent}
 ];
 

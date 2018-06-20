@@ -13,12 +13,14 @@
       <li class="nav-item dropdown" *ngIf="isLogin">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">  Command Center</a>
         <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 47px, 0px); top: 0px; left: 0px; will-change: transform;">
-          <a class="dropdown-item" href="#" >Total system</a>
+          <a class="dropdown-item" href="#" routerLink="/total-system">Total system</a>
             <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">System Info</a>
-          <a class="dropdown-item" href="#">Temperature</a>
+          <a class="dropdown-item" href="#" routerLink="/system-info">System Info</a>
+          <a class="dropdown-item" href="#" routerLink="/temperature">Temperature</a>
           <a class="dropdown-item" href="#" routerLink="./raspberryfirst">Raspberry_3-1</a>
-          <a class="dropdown-item" href="#">ESP8266-1</a>
+          <a class="dropdown-item" href="#" routerLink="./esp8266-one">ESP8266-1</a>
+          <a class="dropdown-item" href="#" routerLink="./esp8266-two">ESP8266-2</a>
+
             <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#" routerLink="/charts">Charts</a>
           <a class="dropdown-item" href="#" routerLink="/chart">Test</a>
